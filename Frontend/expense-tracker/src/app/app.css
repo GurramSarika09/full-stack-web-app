@@ -1,0 +1,63 @@
+.topbar {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+.topbar h1 { margin: 0; font-size: 1.4rem; }
+
+.layout {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.alert, .list-card { grid-column: 1 / -1; }
+
+.card {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+}
+.card h2 { margin: 0 0 1rem; font-size: 1.1rem; }
+
+.alert {
+  background: #fdecea;
+  color: #8a1c14;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+form label { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.actions { display: flex; gap: 0.5rem; }
+.err { color: var(--danger); }
+
+.total { font-size: 2rem; font-weight: 700; margin: 0; }
+.muted { color: var(--muted); margin: 0.25rem 0 1rem; }
+.small { font-size: 0.8rem; margin: 0.15rem 0 0; }
+
+.bars { list-style: none; padding: 0; margin: 0; }
+.bars li { margin-bottom: 0.6rem; }
+.bar-label { display: flex; justify-content: space-between; font-size: 0.9rem; }
+.bar { background: #eef0f4; border-radius: 4px; height: 8px; overflow: hidden; }
+.bar div { background: var(--primary); height: 100%; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid #eceef2; vertical-align: top; }
+th { font-size: 0.8rem; text-transform: uppercase; color: var(--muted); }
+.num { text-align: right; white-space: nowrap; }
+tr.editing { background: #f3f6ff; }
+.row-actions { white-space: nowrap; text-align: right; }
+.row-actions button { margin-left: 0.25rem; }
+.empty { text-align: center; color: var(--muted); padding: 2rem; }
+.chip { background: #eef0f4; border-radius: 999px; padding: 0.1rem 0.6rem; font-size: 0.8rem; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+}
